@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Little Boxes - Página de Contacto</title>
+	<link href="littleboxes.css" rel="stylesheet" type="text/css" media="screen"/>    
+	<link href="versionimprimir.css" rel="stylesheet" type="text/css" media="print"/>        
+</head>
+<body id="pagcontacto" onload="document.formulariocontacto.remitente.focus();">
+<div id="wrapper">
+
+<div id="encabezado">
+    	<a href="#areatexto" class="skiplink">Ir al Contenido</a>
+    	<h1>
+        	<img src="logo.gif" alt="Little Boxes" width="222" height="32" />        </h1>
+        <p>Diseño de páginas Web con CSS.
+        	<span>Fundamentos</span>
+         </p>
+        
+  </div>  
+<!-- Fin encabezado -->
+
+    <div id="navegacion">
+		<ul>
+        	<li id="navi01">
+            	<a href="index.html">Inicio</a>
+            </li>
+            <li id="navi02">
+            	<a href="contacto.html">Contacto</a>
+            </li>
+        </ul>
+    </div> <!-- Fin navegación -->
+
+    <div id="areatexto">
+    	<h2>Contacto</h2>
+
+        <form id="formulariocontacto" name="formulariocontacto" method="post" action="http://www.formular-chef.com/Formular-Chef.cgi">
+        	<input type="hidden" name="recipient" value="giel86X§Xhotmail.com">
+        	<div>
+            	<label for="remitente">Tu e-mail: </label>
+                <input type="text" id="remitente" name="remitente" />
+            </div>
+            <div>
+            	<label for="text">Texto: </label>
+                <textarea id="text" name="text"> </textarea>
+            </div>
+            <div>
+            	<input type="submit" id="submit" value="Enviar" />
+            </div>
+        </form>
+</div> <!-- Fin areatexto -->
+
+    <div id="pie">
+    	<address>
+        	Little Boxes &middot; Calle cuadro, 12 &middot; 02943 Boxland
+            <br />
+            Tel 035774 34711 &middot; Fax 035774 34712
+        </address>
+    </div> <!-- Fin pie -->
+    
+</div> <!-- Fin #wrapper -->
+</body>
+</html>

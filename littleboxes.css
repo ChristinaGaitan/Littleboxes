@@ -1,0 +1,331 @@
+/* StyleSheet para los ejercicios de Little Boxes*/
+
+/*Anular los margenes de tooooooooooooodos los elementos para partir de 0 en todos los navegadores*/
+* {padding:0; margin:0;}
+
+/* Para que siempre se vea la barra de desplazamiento en firefox*/
+html {height:101%;}
+
+body {
+	color: white; 										/*Color de la fuente*/
+	background-color: #8c8c8c;							/*Color de fondo*/
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+
+/*=======================================================================================================================
+	1. Secciones div
+=========================================================================================================================*/
+#wrapper {
+	color: black;
+	background-color: white;
+
+/*Para poner el color completo de la columna */
+	background-image: url(navi_bg_solid.jpg);
+	background-repeat: repeat-y;
+	background-position:top left;
+
+/*	width:70%;											/*Anchura del área del contenido*/
+	width:720px; 										/*Anchura del área del contenido*/	
+	margin-top: 10px;
+	margin-right:auto; 									/*margen derecho automático*/
+	margin-bottom: 10px;
+	margin-left:auto;									/*margen izquierdo automático*/
+}
+
+#encabezado {
+	position:relative; 									/*posicionado pero en el flujo*/
+	color: black;
+	background-color:#f3c600;
+	background-image: url(encabezado_bg_rep.jpg);
+	background-repeat: repeat-y;						/*vertical (uno debajo del otro)*/
+/*	background-repeat: no-repeat;						/*para que solo salga una vez la imagen*/
+/*	background-attachment:fixed;						/*fijar una imagen*/
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+	/*Selector anidado: solo el gráfico en el encabezado*/
+	#encabezado img {
+		background-color: white;
+		padding: 5px;
+		border: 5px solid #d9d9d9;
+	}
+
+	#encabezado p {
+		/*para posicionar el titulo del encabezado*/
+		position:absolute;
+		top: 10px;
+		right:10px;
+		
+		font-weight:bold; /* Negrita*/
+		padding: 5px 0 5px 0;
+		margin-bottom: 0;								/* era 1em */
+	}
+	
+		#encabezado p span {
+			color:#d90000; /*color de la fuente*/
+		}
+
+#navegacion {
+	float:left;
+	width:130px;
+	padding-left: 10px;
+	padding-top: 20px;
+}
+
+	#navegacion ul{
+		color:black;
+		width: 80px;
+		padding-left:10px;
+		margin-left:0;
+	}
+	
+	#navegacion li{
+		list-style:none;
+		border-left: 1px solid #d90000;
+		border-bottom: 1px solid #d90000; 
+		margin:0;
+	}
+	
+	/*La línea de borde encima del elemento de lista "Inicio"*/
+	#navegacion #navi01 {
+		border-top: 1px solid #d90000;
+	}
+
+	#navegacion a{
+		display:block; /*Toda la superficie es clickeable*/
+		text-decoration: none;
+		color:black;
+		padding:4px;
+		border-left: 3px solid white; /*invisible*/	
+	}
+	
+		#navegacion a:hover, #inicio #navi01 a, #pagcontacto #navi02 a {
+			color:black;
+			background-color: white;
+			border-left:3px solid #d90000;
+		}
+		
+#areatexto {
+	margin-left: 130px;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 20px;	
+}
+
+	.imgizda {
+		float:left;
+		padding:3px;	 						/*distancia entre imagen y borde*/
+		border:5px solid #ccc; 					/*El borde de la imagen*/
+		margin-right:10px; 						/*Distancia entre borde y texto*/
+		margin-bottom: 10px; 					/*Distancia hacia abajo*/
+		display:inline; 						/*evitar duplicar margen horizontal*/
+	}
+
+	.imgdcha {
+		float:right;
+		padding:3px; 							/*distancia entre imagen y borde*/
+		border:5px solid #ccc; 					/*El borde de la imagen*/
+		margin-left:10px; 						/*Distancia entre borde y texto*/
+		margin-bottom: 10px; 					/*Distancia hacia abajo*/
+		display:inline; 						/*evitar duplicar margen horizontal*/		
+	}
+	
+#pie {
+	background-color: white;
+	padding: 20px;
+	padding-top: 10px;									/*Relleno superior, debajo de la línea*/
+	border-top: 1px solid #8c8c8c;						/*Borde superior*/
+	margin-top: 20px;									/*Margen superior, encima de la línea*/
+}
+
+/*=======================================================================================================================
+	2. Elementos HTML generales
+=========================================================================================================================*/
+h1 {
+	font-size: 150%;
+}
+
+h2 {
+	font-size: 130%;
+	margin-bottom: 1em;
+}
+
+address {
+	text-align: center; 								/*centrar*/
+	font-size: 80%; 									/*más pequeño*/
+	font-style: normal; 								/*fuente normal, no cursiva*/
+	letter-spacing: 2px; 								/*distancia entre las letras*/
+	line-height: 1.5 em; 								/*distancia entre las líneas*/
+}
+
+a {
+	text-decoration: none; 								/*elimina el subrayado*/
+	outline:none; 										/*eliminar contorno punteado en el navegador*/
+}
+
+
+	/*Respetar este orden de las pseudoclases para el link */
+	a:link {
+		color:#d90000										/*link sin visitar*/
+	}
+	
+	a:visited {
+		color:#cc6666										/*link visitado*/
+	}
+	
+	a:hover, a:focus {
+		text-decoration:underline 							/*cuando cursor sobre el link se subraya*/
+	}
+	
+	a:active {
+		color:white;										/*cuando se da clic en el link*/
+		background-color:#d90000;
+	}
+
+.skiplink {
+	display:none; 										/*quita los links "internos de la página"*/
+}
+
+/*Selectores agrupados
+h1, h2 {font-family:Verdana, Arial, Helvetica, sans-serif; } */
+
+/*Sólo los vínculos de la navegación
+#navegacion a {
+	color:#353535;
+	background-color:transparent;
+	/*transparencia
+}*/
+
+/*Viñetas cuadradas también en las numeraciones
+li {
+	list-style:square;
+}
+*/
+
+/*Cuadros solo para las listas NO ordenadas
+ul li {
+	list-style-type: square;
+}*/
+
+/*Selectores anidados solo signos de numeracion en listas ordenadas
+ol li {
+	list-style-type: decimal;
+}
+
+ol ol li {
+list-style-type: lower-alpha
+}
+*/
+
+/*Clases
+.cuadro_informativo {
+color:black;
+background-color:#8c8c8c;
+border: 3px solid #ecf7dd;
+}
+*/
+
+/*Prioridad Importante!!!
+h2 {
+color:red !important;
+}
+*/
+
+/*Para definir márgenes que quitamos hasta arriba poniendo a 0*/
+p, ul {
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 1em; 								/*margen inferior*/
+	margin-left: 0;
+}
+
+ul ul {
+	margin:0;
+}
+
+li {
+	margin-top:0;
+	margin-right:0;
+	margin-bottom:0;
+	margin-left:1em; 									/*margen izquierdo*/
+}
+
+/*=======================================================================================================================
+	El formulario de contacto
+=========================================================================================================================*/
+
+form {
+	background-color: #eee;
+	width: 400px; /*anchura del formulario*/
+	padding: 20px;
+	border: 1px solid #8c8c8c;
+}
+
+label {display:block;} /*titulo en una línea propia*/
+
+/*ambos campos de entrada iguales*/
+#remitente, textarea {
+	width: 300px;
+	border: 1px solid 8c8c8c;
+	margin-bottom: 1em;
+}
+
+textarea {
+	height: 7em
+}
+
+input:focus, textarea:focus {
+	background-color:#d9d9d9;
+}
+
+/*==============================================================================================================================
+	Navegación con pestañas
+================================================================================================================================*/
+/*						#navegacion {
+							text-align:right;									/*a la derecha*/
+/*							color:black;
+							background-color:#f3c600;
+							background-image: url(encabezado_bg_rep.jpg);
+							background-repeat: repeat-y;
+							background-position: top left;
+							padding-top: 5px;
+							padding-right: 10px;
+							padding-bottom: 4px;
+							padding-left: 10px;	
+							border-bottom: 1px solid #8c8c8c;
+						}
+						
+							#navegacion ul {
+								margin-bottom: 0;								/*sin margen inferior*/
+/*							}
+							
+							#navegacion li {
+								display:inline;
+								list-style-type:none;
+								margin: 0 10px 0 0; 							/*derecha 10px, sino 0 */
+/*								margin: 0; 										/* antes era 10px para la derecha*/
+/*							}
+						
+							#navegacion a {
+								color:black;
+								background-color:#ffeda0;
+								padding: 4px 8px 4px 8px;
+								border:1px solid #8c8c8c;
+							
+							}
+								
+								#navegacion a:active {background-color:white;}
+								
+								#navegacion a:hover, #inicio #navi01 a, #pagcontacto #navi02 a {
+									text-decoration:none; /*fuera el subrayado*/
+/*									color:black;
+									background-color:white;
+									padding-bottom:5px; /*un pixel más que arriba*/
+/*									border-bottom:none; /*adios a la línea inferior*/
+/*								}
+*/

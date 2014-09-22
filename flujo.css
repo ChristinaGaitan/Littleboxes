@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	color:black;
+	background-color:gray;
+	padding:0;
+}
+
+div {
+	width:20%;
+	background-color:white;
+	padding:10px;
+	border:1px solid black;
+	margin:5px;
+}
+
+#otro {
+/*	position:relative;*/
+	position:absolute;	
+	top: 25px;
+	right: 25px;
+	background-color:#f3c600;
+}
+
+p { margin-left: 25%;}
+
+#fijo {
+	position:fixed;
+	top:10px;
+	left:10px;
+	background-color:#f3c600;
+	width:15%;
+	padding:10px;
+	border: 1px solid black;
+}
